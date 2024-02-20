@@ -40,15 +40,3 @@ await model.fit(tf.tensor(fitData.x), tf.tensor(fitData.y), {
   batchSize: 32,
   epochs: 100,
 });
-
-// const privetTokens = convertTextToTokens("Привет привет всем", letterToToken);
-// console.log(privetTokens);
-
-// // console.log(
-// //   splitTokensIntoFitData(privetTokens, INPUT_TOKENS_COUNT, emptyToken).x.map((matrix) => {
-// //     return matrix.map((vector) => tokenToLetter[JSON.stringify(vector)]);
-// //   }),
-// //   splitTokensIntoFitData(privetTokens, INPUT_TOKENS_COUNT, emptyToken).y.map((vector) => {
-// //     return tokenToLetter[JSON.stringify(vector)];
-// //   })
-// // );
