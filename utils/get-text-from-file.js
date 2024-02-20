@@ -5,6 +5,7 @@ const NO_RUSSIAN_LETTERS_PATTERN = /[^а-яА-Я] /g;
 export const getTextFromFile = (path) => {
   const text = fs
     .readFileSync(path, "utf-8")
+    .toLowerCase()
     .trimStart()
     .replace(NO_RUSSIAN_LETTERS_PATTERN, "");
 
