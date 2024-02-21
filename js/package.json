@@ -1,5 +1,5 @@
 {
-  "name": "simple-rnn-generator-tensorflow-js",
+  "name": "simple-rnn-generator-tensorflow",
   "version": "1.0.0",
   "description": "A simple recurrent neural network written in TensorFlow JS. It does not generate words, but symbolically. You give a line to enter, it gives you its continuation.",
   "main": "index.js",

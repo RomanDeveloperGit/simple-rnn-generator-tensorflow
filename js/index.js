@@ -7,7 +7,7 @@ import { convertTextToTokens } from "./utils/convert-text-to-tokens.js";
 
 const INPUT_NEURONS_COUNT = 6;
 
-const trainingText = getTextFromFile("./train.txt");
+const trainingText = getTextFromFile("../training-text.txt");
 
 const { letterToToken, tokenToLetter, emptyToken } =
   getTokenMatrixByText(trainingText);
@@ -19,9 +19,7 @@ model.add(
   tf.layers.inputLayer({ inputShape: [INPUT_NEURONS_COUNT, tokens.length] })
 );
 model.add(tf.layers.simpleRNN({ units: 128, activation: "tanh" }));
-model.add(
-  tf.layers.dense({ units: tokens.length, activation: "softmax" })
-);
+model.add(tf.layers.dense({ units: tokens.length, activation: "softmax" }));
 
 model.compile({
   loss: "categoricalCrossentropy",
